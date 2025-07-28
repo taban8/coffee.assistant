@@ -1,0 +1,107 @@
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #f4f1ee, #e8e3dc);
+  color: #333;
+  min-height:100vh;
+  display:flex; justify-content:center; align-items:center;
+}
+
+.container {
+  width: 100%; max-width: 420px; padding:20px;
+}
+
+.card {
+  background:#fff;
+  border-radius:12px;
+  padding:30px 25px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  margin-bottom:20px;
+  transition:transform 0.3s ease;
+}
+
+#order-card form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+#order-card .form-row {
+  flex: 1 1 calc(50% - 20px);
+  flex-direction: column;
+}
+
+#order-card button {
+  flex: 1 1 100%;
+  margin-top: 30px;
+}
+
+
+.card:hover { transform: translateY(-5px); }
+
+.hidden { display:none !important; }
+
+h2 {
+  font-size:1.5rem;
+  color:#5a4a44;
+  text-align:center;
+  margin-bottom:20px;
+}
+
+form {
+  display:flex; flex-direction:column; gap:15px;
+}
+
+label {
+  font-weight:600;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input, select {
+  padding:10px 14px;
+  border:1.8px solid #ccc;
+  border-radius:8px;
+  font-size:1rem;
+  transition:border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+  border-color:#a16a50;
+  box-shadow:0 0 0 3px rgba(161,106,80,0.2);
+}
+
+button {
+  padding:12px;
+  background: linear-gradient(135deg, #a16a50, #6d4c3d);
+  color:#fff;
+  font-size:1.1rem;
+  font-weight:bold;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  box-shadow:0 4px 8px rgba(161,106,80,0.3);
+  transition:background 0.3s, transform 0.2s;
+}
+
+button:hover { background: linear-gradient(135deg, #8b5b3c, #5b3b2e); transform:scale(1.03); }
+button:active { transform:scale(0.97); }
+
+.result {
+  margin-top:20px;
+  padding:16px;
+  background:#f3e2d1;
+  border-left:5px solid #a16a50;
+  border-radius:6px;
+  color:#4a3b33;
+  font-size:0.95rem;
+  line-height:1.5;
+  animation:fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity:0; }
+  to { opacity:1; }
+}
